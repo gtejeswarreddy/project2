@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.io.*;
+class check
+{
+    public static void main(String[] args)
+    { 
+        int i,n,mid;
+        int[] arr=new int[100];
+        System.out.println("Enter The Size Of Array");
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        System.out.println("Enter "+n+" Elements Into The Array In Sorted Array");
+        for(i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        mid=(n-1)/2;
+        System.out.println("Enter The Element To Search");
+        int se=sc.nextInt();
+        if(arr[mid]<se)
+        {
+          for(i=mid+1;i<n;i++)
+          {
+            if(se==arr[mid])
+            {
+                System.out.println("Element Is Found at Index"+i);
+            }
+          }
+        }
+         else if(arr[mid]>se)
+        {
+          for(i=0;i<mid;i++)
+          {
+            if(se==arr[mid])
+            {
+                System.out.println("Element Is Found at Index"+i);
+            }
+          }
+        }
+        else
+        {
+          System.out.println("Element is Found at Index "+mid);
+        }
+         
+    }
+}
